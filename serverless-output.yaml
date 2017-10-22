@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  lambdaCumulocityBot:
+    Properties:
+      CodeUri: s3://htapia-lambda-east/a296a46e4904469066d660a72fca4e20
+      Description: ''
+      Handler: alarms.handler
+      MemorySize: 256
+      Role: arn:aws:iam::540971695762:role/service-role/myRole
+      Runtime: nodejs6.10
+      Timeout: 3
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
